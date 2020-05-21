@@ -22,3 +22,8 @@ const greetingReducer = (state = initialState, action) => {
 
 // the store is the engine for managing the state
 export const store = new Store(initialState, greetingReducer);
+
+// action creators
+export const hello = () => ({type: 'hello'})
+export const howdy = () => ({type: 'howdy'})
+export const hi = () => ({type: 'hi'})

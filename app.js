@@ -1,4 +1,4 @@
-import { store } from './store.js';
+import { store, hello, howdy, hi } from './store.js';
 
 // when there was an update, the store will tell us through events
 store.addEventListener('state', () => {
@@ -20,14 +20,11 @@ function updateCounter() {
 
 // make the buttons inform the store
 document.getElementById('btnHello').addEventListener('click', () => {
-    const action = { type: 'hello' };
-    store.dispatch(action);
+    store.dispatch(hello());
 });
 document.getElementById('btnHowdy').addEventListener('click', () => {
-    const action = { type: 'howdy' };
-    store.dispatch(action);
+    store.dispatch(howdy());
 });
 document.getElementById('btnHi').addEventListener('click', () => {
-    const action = { type: 'hi' };
-    store.dispatch(action);
+    store.dispatch(hi());
 });
